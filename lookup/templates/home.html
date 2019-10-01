@@ -3,18 +3,30 @@
 
 {% block content %}
 
-<h1> hello </h1> 
-</br>
-{{api.0}}
+{% if zipcode %}
+    {{ zipcode }}
+{% endif %}
+
+{% if api %}
+{% if api == "Error" %}
+    There was an error
+{% else %}
+
+<div class="jumbotron">
+        <h1 class="display-4">{{ api.0.Category.Name }}
+          </h1>
+        <p class="lead"> Current {{api.0.ReportingArea}}     Air Quality: {{api.0.AQI}}  </p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      </div>
 
 </br>
-</br>
-Air Quality: {{api.0.AQI}} </br>
-Area: {{ api.0.ReportingArea }} </br>
-
-Category: {{ api.0.Category.Name }}</br></br>
 
 
+
+{% endif %}
+
+{% endif %}
 
 
 {% endblock %}
