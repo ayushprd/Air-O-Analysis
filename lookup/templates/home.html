@@ -3,9 +3,6 @@
 
 {% block content %}
 
-{% if zipcode %}
-    {{ zipcode }}
-{% endif %}
 
 {% if api %}
 {% if api == "Error" %}
@@ -18,7 +15,7 @@
         <p class="lead"> Current {{api.0.ReportingArea}}     Air Quality: {{api.0.AQI}}  </p>
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      </div>
+</div>
 
 </br>
 
