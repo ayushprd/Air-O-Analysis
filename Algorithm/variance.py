@@ -36,7 +36,7 @@ Data={"a":5,"B":7,"V":7,"F":8,"g":9}
 
 import statistics
 
-standard_Value=10; # this is our standard value lowering it means closer points to a graph and vice versa 
+standard_Value=10 # this is our standard value lowering it means closer points to a graph and vice versa 
 Data={"a":10,"B":60,"V":70,"F":500,"g":68} # Sample data you may input ur own data and check it
 sample = [Data[key] for key in Data] #Converts the data into a array or list 
 temp=[]
