@@ -1,0 +1,22 @@
+Year, Month, Date,Latitude,longitude,AOD1,AOD2,STD3
+2000,2,26,77.315,28.651,-1,0.308,0.013
+<fileinput.FileInput object at 0x000001C4171FF4A8>
+2000,2,27,77.315,28.651,0.24,0.295,0.053
+<fileinput.FileInput object at 0x000001C4171FF4A8>
+2000,2,28,77.315,28.651,-1,0.439,0.061
+<fileinput.FileInput object at 0x000001C4171FF4A8>
+2000,2,29,77.315,28.651,0.66,0.64,0.079
+<fileinput.FileInput object at 0x000001C4171FF4A8>
+2000,3,2,77.315,28.651,-1,0.687,-1
+<fileinput.FileInput object at 0x000001C4171FF4A8>
+2000,3,3,77.315,28.651,0.39,0.3,0.058
+<fileinput.FileInput object at 0x000001C4171FF4A8>
+2000,3,4,77.315,28.651,-1,1.166,0.086
+<fileinput.FileInput object at 0x000001C4171FF4A8>
+2000,3,5,77.315,28.651,0.73,0.921,0.221
+<fileinput.FileInput object at 0x000001C4171FF4A8>
+2000,3,7,77.315,28.651,0.34,0.5,0.133
+<fileinput.FileInput object at 0x000001C4171FF4A8>
+2000,3,8,77.315,28.651,0.41,0.428,0.036
+<fileinput.FileInput object at 0x000001C4171FF4A8>
+2000,3,10,77.315,28.651,0.29,0.358,0.047
