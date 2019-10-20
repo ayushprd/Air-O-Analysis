@@ -31,3 +31,12 @@ def home(request):
 
 def about(request):
     return render(request, 'about.html', {})
+
+import random
+
+def about(request):
+    num= random.randint(1,100)
+    context= {
+        'num': num,
+        }
+    return render(request, 'about.html', context)

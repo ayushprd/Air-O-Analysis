@@ -8,6 +8,19 @@
 <head>
 	<meta charset="utf-8">
 	<title>Leaflet Map</title>
+	<style>
+            #gd {
+	            margin-left:1000px;
+                margin-top:-630px;
+              }
+              
+              .container {
+				height:500px;
+                width: 500px;
+                margin: 100 auto;
+                font-family: Dosis;
+              }
+    </style>
 	<style type="text/css">
 		body{
       background: #000;
@@ -693,6 +706,13 @@
 
 	}
 	</style>
+	
+	<link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+	<!--   <script src="http://localhost:3000/build/plotly.js"></script> -->
+	  <script src="https://cdn.plot.ly/plotly-1.49.0.min.js"></script>
+	<!--   <script src="https://44331-45646037-gh.circle-artifacts.com/0/dist/plotly.min.js"></script> -->
+	
+	
 <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 </head>
 <body>
@@ -708,132 +728,24 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 }).addTo(map);
 
 
-
-var myDataPoint = L.marker([42.362432, -71.086086]);
-var myDataLine = L.polyline([[42.357227, -71.092631], [42.351411, -71.089723]],
-    {color: 'red', weight: 10});
-var myArea = L.polygon([[42.353770, -71.103606], [42.355447, -71.104475],
-    [42.362681, -71.089830], [42.361829, -71.079230]],
-    {color: 'blue', weight: 4});
-
-
-
-var LeafIcon = L.Icon.extend({
-    options: {
-       iconSize:     [38, 95],
-       shadowSize:   [50, 64],
-       iconAnchor:   [22, 94],
-       shadowAnchor: [4, 62],
-       popupAnchor:  [-3, -76]
-    }
-});
-var greenIcon = new LeafIcon({
-    iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
-    shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
-})
-L.marker([51.5, -0.09], {icon: greenIcon});
-
-
-var circle = L.circle([37.786542, -122.386022], {
+var circle = L.circle([28.7041, 77.1025], {
           color: "darkcyan",
           fillColor: "#00FFFF",
           fillOpacity: 0.1,
           radius: 2820.09
       }).addTo(map); 
-
-circle.bindPopup("Moderate").openPopup();
-
+	  
+ 
+		var a = "{{ num }}";
+		alert(a);
+		
+	 
+circle.bindPopup("{{ num }}").openPopup();
+	
 </script>
 
-<div class="container1">
-        <div class="row">
-            <div class="col-md-8 gray">Health risk category
-                <div class="row">
-                    <div class="col-lg-12 green">.</div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 green">Low
-                    <div class="row">
-                    <div class="col-lg-12 green">.
-                        <div class="row">
-                            <div class="col-lg-12 darkorange">.</div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-lg-12 darkorange">Moderate
-                        <div class="row">
-                            <div class="col-lg-12 darkorange">.</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12 red">High
-                                <div class="row">
-                                    <div class="col-lg-12 deepred">.</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12 deepred">Very High
-                                        <div class="row">
-                                            <div class="col-lg-12 deepred">.</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12 black text-white">Serious</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="col-md-2 gray">AQHI
-                <div class="row">
-                    <div class="col-lg-12 lightgray">1
-                    <div class="row">
-                    <div class="col-lg-12 gray">2
-                        <div class="row">
-                    <div class="col-lg-12 lightgray">3
-                        <div class="row">
-                    <div class="col-lg-12 gray">4
-                        <div class="row">
-                    <div class="col-lg-12 lightgray">5
-                        <div class="row">
-                    <div class="col-lg-12 gray">6
-                        <div class="row">
-                    <div class="col-lg-12 lightgray">7
-                        <div class="row">
-                    <div class="col-lg-12 gray">8
-                        <div class="row">
-                    <div class="col-lg-12 lightgray">9
-                        <div class="row">
-                    <div class="col-lg-12 gray">10
-                        <div class="row">
-                    <div class="col-lg-12 lightgray">10+</div>
-                </div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+	
 <div class="jumbotron" name="jumbotron">
         <h1 class="display-4">{{ api.0.Category.Name }}
           </h1>
@@ -841,6 +753,26 @@ circle.bindPopup("Moderate").openPopup();
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
 </div>
+<div id="gd">
+
+	</div>
+	<script>
+			var data = [
+			{
+				domain: { x: [0, 1], y: [0, 1] },
+				value: "0.7",
+				gauge:{axis:{range:[null,2],tickwidth:1,tickcolor:"white"}},
+				title: { text: "Aerosol Optical Depth" },
+				type: "indicator",
+				mode: "gauge+number"
+			}
+		];
+		
+		var layout = { width: 500, height: 500, margin: { t: 0, b: 0},
+		  paper_bgcolor:'black', 
+		  font:{color:"white"}};
+		Plotly.newPlot(gd, data, layout);
+	</script>
 
 </body>
 </html>

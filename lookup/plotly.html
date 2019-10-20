@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <style>
+            #gd1 {
+                margin-top:20px;
+              }
+              
+              .container {
+                width: 90%;
+                margin: 0 auto;
+                font-family: Dosis;
+              }
+    </style>
+   
+  <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+<!--   <script src="http://localhost:3000/build/plotly.js"></script> -->
+  <script src="https://cdn.plot.ly/plotly-1.49.0.min.js"></script>
+<!--   <script src="https://44331-45646037-gh.circle-artifacts.com/0/dist/plotly.min.js"></script> -->
+</head>
+
+<body>
+    <div id="gd"></div>
+    <script>
+            var data = [
+            {
+                domain: { x: [0, 1], y: [0, 1] },
+                value: 270,
+                title: { text: "Speed" },
+                type: "indicator",
+                mode: "gauge+number"
+            }
+        ];
+        
+        var layout = { width: 600, height: 500, margin: { t: 0, b: 0 } };
+        Plotly.newPlot(gd, data, layout);
+    </script>
+</body>
+</html>
+ 
+ 
