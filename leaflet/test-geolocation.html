@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Leaflet Map</title>
+
+<link rel="stylesheet" href="test-geolocation.css" />
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Our web map and content will go here -->
+    <div id="map" style="width: 705px; height: 375px"></div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    // Create variable to hold map element, give initial settings to map
+    var map = L.map('map',{ center: [42.362432, -71.086086], zoom: 14});
+    // Add OpenStreetMap tile layer to map element
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+}).addTo(map);
+
+
+
+var myDataPoint = L.marker([42.362432, -71.086086]);
+var myDataLine = L.polyline([[42.357227, -71.092631], [42.351411, -71.089723]],
+    {color: 'red', weight: 10});
+var myArea = L.polygon([[42.353770, -71.103606], [42.355447, -71.104475],
+    [42.362681, -71.089830], [42.361829, -71.079230]],
+    {color: 'blue', weight: 4});
+
+
+
+var LeafIcon = L.Icon.extend({
+    options: {
+       iconSize:     [38, 95],
+       shadowSize:   [50, 64],
+       iconAnchor:   [22, 94],
+       shadowAnchor: [4, 62],
+       popupAnchor:  [-3, -76]
+    }
+});
+var greenIcon = new LeafIcon({
+    iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
+    shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
+})
+L.marker([51.5, -0.09], {icon: greenIcon});
+
+
+
+
+var circle = L.circle([37.786542, -122.386022], {
+          color: "darkcyan",
+          fillColor: "#00FFFF",
+          fillOpacity: 0.1,
+          radius: 2820.09
+      }).addTo(map);
+
+circle.bindPopup("Moderate").openPopup();
+
+</script>
+</body>
+</html>
