@@ -1,5 +1,7 @@
 /* required styles */
-
+body{
+	padding-left: 850px;
+}
 .leaflet-pane,
 .leaflet-tile,
 .leaflet-marker-icon,
