@@ -107,7 +107,12 @@ def variance(sample):
                 most_Accurate_Value=sample[i]
     return most_Accurate_Value
 
-def ground_Aqi(ground_data,location_entered):
+def ground_Aqi():
+    url = ('https://api.openaq.org/v1/measurements?city=Delhi')  
+    ground_data=ground(url)
+    location_entered='Delhi Chanakyapuri'
+    actual_location= geolocator.geocode(location_entered)
+    location_entered=(actual_location.latitude,actual_location.longitude)
     dict =[]
     i=0
     while i<len(ground_data)-7:
@@ -145,11 +150,10 @@ def generator():
     location_entered=(actual_location.latitude,actual_location.longitude)
     url = ('https://api.openaq.org/v1/measurements?city=Delhi')  
     ground_data=ground(url)
-    sat=satilite('C:\cpp\Python\AOD_DATA\Finished.csv')
+    sat=satilite('/home/ayush/Desktop/H.csv')
     sati_AOD
-    dict={'ground':ground_Aqi(ground_data,location_entered),'satalite':sati_AOD(sat,location_entered),'Longitude':actual_location.longitude,'Latitude':actual_location.latitude}
+    dict={'satalite':sati_AOD(sat,location_entered),'Longitude':actual_location.longitude,'Latitude':actual_location.latitude}
     print(dict)
-    print(dict['ground'])
 
 generator()
     

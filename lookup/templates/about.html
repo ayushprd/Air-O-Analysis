@@ -728,7 +728,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 }).addTo(map);
 
 
-var circle = L.circle([28.7041, 77.1025], {
+var circle = L.circle(["{{ lat }}", "{{ lon }}"], {
           color: "darkcyan",
           fillColor: "#00FFFF",
           fillOpacity: 0.1,
@@ -736,31 +736,32 @@ var circle = L.circle([28.7041, 77.1025], {
       }).addTo(map); 
 	  
  
-		var a = "{{ num }}";
+		var a = "{{ gnd }}";
 		alert(a);
 		
 	 
-circle.bindPopup("{{ num }}").openPopup();
+circle.bindPopup("{{ gnd }}").openPopup();
 	
 </script>
 
 
 	
 <div class="jumbotron" name="jumbotron">
-        <h1 class="display-4">{{ api.0.Category.Name }}
+        <h1 class="display-4">{{ dict.ground }}
           </h1>
-        <p class="lead"> Current {{api.0.ReportingArea}}     Air Quality: {{api.0.AQI}}  </p>
+        <p class="lead"> <h1>Current Air Quality: {{gnd}} </h1> </p>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
 </div>
 <div id="gd">
 
 	</div>
 	<script>
+		var b = "{{ air }}";
+		alert(b);
 			var data = [
 			{
 				domain: { x: [0, 1], y: [0, 1] },
-				value: "0.7",
+				value: "{{ air }}",
 				gauge:{axis:{range:[null,2],tickwidth:1,tickcolor:"white"}},
 				title: { text: "Aerosol Optical Depth" },
 				type: "indicator",
