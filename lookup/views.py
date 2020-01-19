@@ -267,7 +267,7 @@ def about(request):
     location_entered=(actual_location.latitude,actual_location.longitude)
     url = ('https://api.openaq.org/v1/measurements?city=Delhi')  
     ground_data=ground(url)
-    sat=satilite('/home/ayush/Desktop/Actual1.csv')
+    sat=satilite('/home/ayush/Air-O-Analysis_NASA_SpaceApps/actual1.csv')
     
     gnd=ground_Aqi(ground_data,location_entered)
     air = sati_AOD(sat,location_entered)
