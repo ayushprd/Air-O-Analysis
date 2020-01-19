@@ -1,0 +1,14 @@
+
+Django==3.0.2
+
+geopy==1.20.0
+
+haversine==2.2.0
+
+
+
+
+requests==2.22.0
+
+simplejson==3.13.2
+
