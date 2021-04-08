@@ -1,5 +1,5 @@
 
-Django==3.1.6
+Django==3.1.8
 
 geopy==1.20.0
 
